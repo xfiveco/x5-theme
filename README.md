@@ -58,5 +58,102 @@ http://codex.wordpress.org/Function_Reference/get_post_format
 functions.php is the file where most of the Theme based functions should be placed, by default there’s nothing enabled with WPized Light.
 
 ## WPized Light Theme Specific Functionality
-WPized Light comes with some default functions that can be enabled with simple function call, placed within the functions.php of the theme:
+WPized Light comes with some default functions that can be enabled with simple function call, placed within the functions.php of the theme.
 
+### wp_light_seo_title
+
+Will print a SEO friendly and optimized title between the `<title> </title>` tags instead of the default WordPress title.
+
+```php
+add_theme_support( 'wp_light_seo_title' ); 
+```
+
+### wp_light_threaded_comments
+
+Will enable threaded comments (reply link and dynamic .js)
+
+```php
+add_theme_support( 'wp_light_threaded_comments' );
+```
+
+### wp_light_comment_form_defaults
+
+Will enable default styling of the comment form and will also add default form fields
+
+```php
+add_theme_support( 'wp_light_comment_form_defaults' );
+```
+
+### wp_light_default_sidebar
+
+Will make the theme sidebar ready by adding the Widgets section to the Appearance -> Widgets, file which displays the sidebar is sidebar.php 
+
+```php
+add_theme_support( 'wp_light_default_sidebar' ); 
+```
+
+### wp_light_default_menu
+
+Will add Appearance -> Menus entry, giving you the ability to add menu entries. The menu, if filled with content will be automatically printed in header.php line 42.
+
+```php
+add_theme_support( 'wp_light_default_menu' );
+```
+
+Each of these functions (exculding seo-title, threaded-comments, comments) has an optional second parameter in the form of an array that lets one overwrite the defaults. 
+
+By default functions.php supply default values. For instance:
+
+```php
+add_theme_support( 'sidebars', array(
+    array(),
+    array(),
+    array()
+));
+```
+
+Would register 3 different sidebars with default values: (Sidebar-1, Sidebar-2, Sidebar-3), the function behind is using [register_sidebar( $sidebar );](http://codex.wordpress.org/Function_Reference/register_sidebar) hence the argument is an array of comma separated arrays, where each array stands for a sidebar. Passing some extra arguments can overwrite the defaults. Say:
+
+```php
+add_theme_support( 'sidebars', array(
+    array(),
+    array(),
+    array(
+        'name' => __( "Sidebar-Rafal", WP_LIGHT ),
+        'id' => "sidebar-rafal",
+    )
+));
+```
+
+Would create a differently named 3rd Sidebar.
+
+The same pattern applies to all other functionalities. That is 
+
+```php
+add_theme_support( 'menus', array(
+    'navigation-top' => __( 'Top Navigation Menu' ),
+    'navigation-foot' => __( 'Footer Navigation Menu' ),
+));
+```
+
+makes usage of the [register_nav_menus( $menus );](http://codex.wordpress.org/Function_Reference/register_nav_menus) 
+
+If navigation-top was present it will be automatically rendered at within the header.php file starting line 42.
+
+Similarly:
+
+```php
+add_theme_support( 'images', array(
+    '400x500' => array(
+        'width' => '400',
+        'height' => '500',
+        'crop' => true,
+    )
+));
+```    
+
+Makes usage of [add_image_size();](http://codex.wordpress.org/Function_Reference/add_image_size) function, automatically adding support for post thumbnails.
+
+Please avoid adding any config directly to the functions.php file. Every extra, theme specific functions should be stored within includes directory, given a descriptive name.
+
+For example sidebars.php would only contain logic related to sidebars (as register_sidebar), nav-menus would solely contain logic related to navigation menus etc.
