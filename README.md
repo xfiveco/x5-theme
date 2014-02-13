@@ -1,2 +1,2 @@
-wpized-light
+WPized Light
 ============
