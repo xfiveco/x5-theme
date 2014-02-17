@@ -22,7 +22,7 @@ if ( current_theme_supports( 'sidebars' ) ) {
 				'id' => "sidebar-{$count_sidebars}",
 				'before_widget' => '<section id="%1$s"class="%2$s">',
 				'after_widget' => '</section>',
-				'before_title' => '</h3>',
+				'before_title' => '<h3>',
 				'after_title' => '</h3>',
 			);
 
