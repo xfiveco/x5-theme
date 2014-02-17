@@ -50,5 +50,27 @@ add_theme_support( 'images', array(
 	), ) );
 
 
+add_theme_support( 'cpt', array(
+	// team post
+	'wp-light-team' => array(
+		'singular' => 'Team Member',
+		'plural' => 'Team Members',
+		'rewrite' => array( 'slug' => 'team', 'with_front' => true, 'publicly_queryable' => true ),
+	),
+) );
+
+
+add_theme_support( 'custom-tax', array(
+	// taxonomy like category
+	'wp-light-team-tag' => array(
+		'singular' => 'Member Category',
+		'plural' => 'Member Categories',
+		'rewrite' => array( 'slug' => 'category', 'with_front' => false ),
+		'posts' => array( 'wp-light-team' ),
+	),
+		)
+);
+
+
 
 
