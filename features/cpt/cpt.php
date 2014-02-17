@@ -28,7 +28,6 @@ if ( current_theme_supports( 'cpt' ) ) {
 
 		// iterate through all of the post definitions and register the post types
 		foreach ( $cpt as $key => $post ) {
-			var_dump($post);
 			$labels = array(
 				'name' => _x( "{$post['singular']}", 'post type general name' ),
 				'singular_name' => _x( "{$post['singular']}", 'post type singular name' ),
