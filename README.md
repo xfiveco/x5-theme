@@ -127,7 +127,7 @@ add_theme_support( 'sidebars', array(
 
 Would create a differently named 3rd Sidebar.
 
-The same pattern applies to all other functionalities. That is 
+The same pattern applies to all other functionalities. That is:
 
 ```php
 add_theme_support( 'menus', array(
@@ -163,7 +163,7 @@ add_theme_support( 'cpt', array(
 ) );
 ```  
 
-Makes usage of [register_post_type();](http://codex.wordpress.org/Function_Reference/register_post_type) function. The posts are named after each array key passed (hence wp-light-team will be this Post Type's prefix.
+Makes usage of [register_post_type();](http://codex.wordpress.org/Function_Reference/register_post_type) function. The posts are named after each array key passed (hence wp-light-team will be this Post Type's prefix).
 
 Similarly: 
 
