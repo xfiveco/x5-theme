@@ -140,8 +140,6 @@ makes usage of the [register_nav_menus( $menus );](http://codex.wordpress.org/Fu
 
 If navigation-top was present it will be automatically rendered at within the header.php file starting line 42.
 
-Similarly:
-
 ```php
 add_theme_support( 'images', array(
     '400x500' => array(
@@ -153,6 +151,36 @@ add_theme_support( 'images', array(
 ```    
 
 Makes usage of [add_image_size();](http://codex.wordpress.org/Function_Reference/add_image_size) function, automatically adding support for post thumbnails.
+
+```php
+add_theme_support( 'cpt', array(
+	// team post
+	'wp-light-team' => array(
+		'singular' => 'Team Member',
+		'plural' => 'Team Members',
+		'rewrite' => array( 'slug' => 'team', 'with_front' => true, 'publicly_queryable' => true ),
+	),
+) );
+```  
+
+Makes usage of [register_post_type();](http://codex.wordpress.org/Function_Reference/register_post_type) function. The posts are named after each array key passed (hence wp-light-team will be this Post Type's prefix.
+
+Similarly: 
+
+```php
+add_theme_support( 'custom-tax', array(
+	// taxonomy like category
+	'wp-light-team-tag' => array(
+		'singular' => 'Member Category',
+		'plural' => 'Member Categories',
+		'rewrite' => array( 'slug' => 'category', 'with_front' => false ),
+		'posts' => array( 'wp-light-team' ),
+	),
+		)
+);
+```  
+
+Makes usage of [register_taxonomy();](http://codex.wordpress.org/Function_Reference/register_taxonomy) function.
 
 Please avoid adding any config directly to the functions.php file. Every extra, theme specific functions should be stored within includes directory, given a descriptive name.
 
