@@ -19,7 +19,6 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
         <title><?php wp_title( '|', true, 'right' ); ?></title>
 		<meta name="description" content="<?php bloginfo( 'description' ); ?>" />
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
 		<link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/_ui/css/main.css" />
 
