@@ -243,9 +243,9 @@ function custom_validate_field($input) {
 	return $valid;
 }
 ```
+They could be placed in an included file or at the bottom of functions.php. 
 
-- They could be placed in an included file or at the bottom of functions.php. 
-- They are created as an overlay to the [Settings API](https://codex.wordpress.org/Settings_API).
+- The Settings are created as an overlay to the [Settings API](https://codex.wordpress.org/Settings_API).
 - The Settings are the example of a complex WPized Light plugin, which loads additionals files, stored within the plugin directory, along the auto-included file.
 
 Please avoid adding any config directly to the functions.php file. Every extra, theme specific functions should be stored within includes directory, given a descriptive name.
