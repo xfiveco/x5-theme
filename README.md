@@ -182,7 +182,7 @@ add_theme_support( 'custom-tax', array(
 
 Makes usage of [register_taxonomy();](http://codex.wordpress.org/Function_Reference/register_taxonomy) function.
 
-WPized Light also supports semi-automatic creation of Appearance -> Theme Options page, for example
+WPized Light also supports semi-automatic creation of Appearance -> Theme Options page, for example:
 
 ```php
 'settings' => array(
@@ -244,11 +244,9 @@ function custom_validate_field($input) {
 }
 ```
 
-They could be placed in an included file or at the bottom of functions.php.
-
-They are created as an overlay to the [Settings API](https://codex.wordpress.org/Settings_API)
-
-The Settings are an example of a complex WPized Light plugin, which loads additionals files, stored within the plugin directory, along the auto-included file.
+- They could be placed in an included file or at the bottom of functions.php. 
+- They are created as an overlay to the [Settings API](https://codex.wordpress.org/Settings_API).
+- The Settings are the example of a complex WPized Light plugin, which loads additionals files, stored within the plugin directory, along the auto-included file.
 
 Please avoid adding any config directly to the functions.php file. Every extra, theme specific functions should be stored within includes directory, given a descriptive name.
 For example sidebars.php would only contain logic related to sidebars (as register_sidebar), nav-menus would solely contain logic related to navigation menus etc.
