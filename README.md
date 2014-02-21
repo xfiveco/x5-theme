@@ -182,6 +182,73 @@ add_theme_support( 'custom-tax', array(
 
 Makes usage of [register_taxonomy();](http://codex.wordpress.org/Function_Reference/register_taxonomy) function.
 
-Please avoid adding any config directly to the functions.php file. Every extra, theme specific functions should be stored within includes directory, given a descriptive name.
+WPized Light also supports semi-automatic creation of Appearance -> Theme Options page, for example
 
+```php
+'settings' => array(
+		'opt1' => array(
+			'type' => 'text',
+			'name' => 'input-text-1',
+			'desc' => 'Input type text test',
+		),
+		'opt2' => array(
+			'type' => 'text',
+			'name' => 'input-text-2',
+			'desc' => 'Input type text test 2',
+		),
+		'opt3' => array(
+			'type' => 'dropdown_pages',
+			'name' => 'dropdown-pages',
+			'desc' => 'Testing dropdown pages',
+		),
+		'opt4' => array(
+			'type' => 'wp_editor',
+			'name' => 'wp-editor',
+			'desc' => 'Testing WP Editor',
+		)
+	),
+```
+Would create 4 options:
+
+* 2 input text fields
+* 1 dropdown pages field
+* 1 wp editor field
+
+In case custom Theme Options were to be added WPized Light supports custom callback functionality, for example:
+
+```php
+'settings' => array(
+		'custom' => array(
+			'generate_field_callback' => 'custom_generate_field',
+			'validate_field_callback' => 'custom_validate_field',
+			'name' => 'custom',
+			'desc' => 'Custom Field with callback functions',
+		),
+),
+```
+Where custom callback functions could be of the following form:
+
+```php 
+function custom_generate_field() {
+	$options = get_option( 'base_options' );
+	if ( !empty( $options['custom'] ) ) {
+		echo "<input id='custom' name='base_options[custom]' size='80' type='text' value='{$options['custom']}' />";
+	}
+	else
+		echo "<input id='custom' name='base_options[custom]' size='80' type='text' value='' />";
+}
+
+function custom_validate_field($input) {
+	$valid = $input['custom'];
+	return $valid;
+}
+```
+
+They could be placed in an included file or at the bottom of functions.php.
+
+They are created as an overlay to the [Settings API](https://codex.wordpress.org/Settings_API)
+
+The Settings are an example of a complex WPized Light plugin, which loads additionals files, stored within the plugin directory, along the auto-included file.
+
+Please avoid adding any config directly to the functions.php file. Every extra, theme specific functions should be stored within includes directory, given a descriptive name.
 For example sidebars.php would only contain logic related to sidebars (as register_sidebar), nav-menus would solely contain logic related to navigation menus etc.

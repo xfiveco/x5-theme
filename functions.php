@@ -71,6 +71,23 @@ add_theme_support( 'custom-tax', array(
 		)
 );
 
+add_theme_support( 'settings', array(
+	'opt1' => array(
+		'type' => 'text',
+		'name' => 'fb',
+		'desc' => 'Facebook link',
+	),
+	'opt2' => array(
+		'type' => 'dropdown_pages',
+		'name' => 'dropdown-pages',
+		'desc' => 'Testing dropdown pages',
+	),
+	'opt3' => array(
+		'type' => 'wp_editor',
+		'name' => 'wp-editor',
+		'desc' => 'Testing WP Editor',
+	),
+) );
 
 
 
