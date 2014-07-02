@@ -20,7 +20,7 @@
         <title><?php wp_title( '|', true, 'right' ); ?></title>
 		<meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 
-		<link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/_ui/css/main.css" />
+		<link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/css/main.css" />
 
 		<!-- optional but recommended -->
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
