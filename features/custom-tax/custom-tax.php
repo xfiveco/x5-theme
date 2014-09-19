@@ -20,7 +20,7 @@ if ( current_theme_supports( 'custom-tax' ) ) {
 		foreach ( $taxonomies as $key => $tax ) {
 
 			$labels = array(
-				'name' => $tax['singular'],
+				'name' => $tax['plural'],
 				'singular_name' => $tax['singular'],
 				'search_items' => 'Search ' . $tax['plural'],
 				'all_items' => 'All ' . $tax['plural'],
@@ -28,7 +28,7 @@ if ( current_theme_supports( 'custom-tax' ) ) {
 				'update_item' => 'Update ' . $tax['singular'],
 				'add_new_item' => 'Add new ' . $tax['singular'],
 				'new_item_name' => 'New ' . $tax['singular'],
-				'menu_name' => isset( $tax['menu_name'] ) ? $tax['menu_name'] : $tax['singular'],
+				'menu_name' => isset( $tax['menu_name'] ) ? $tax['menu_name'] : $tax['plural'],
 				'parent_item' => 'Parent ' . $tax['singular'],
 				'parent_item_colon' => 'Parent ' . $tax['singular'],
 				'separate_items_with_commas' => 'Separate tags with commas ' . $tax['plural'],
