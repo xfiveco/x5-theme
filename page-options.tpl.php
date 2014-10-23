@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Options Page
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -22,4 +22,4 @@ $wp_light_dropdown_pages = isset( $wp_light_options['wp_light_dropdown_pages'] )
 <?php echo $wp_light_dropdown_pages; ?>
 
 <?php get_sidebar(); ?>
-<?php get_footer(); 
+<?php get_footer();
