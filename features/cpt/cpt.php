@@ -29,7 +29,7 @@ if ( current_theme_supports( 'cpt' ) ) {
 		// iterate through all of the post definitions and register the post types
 		foreach ( $cpt as $key => $post ) {
 			$labels = array(
-				'name' => _x( "{$post['singular']}", 'post type general name' ),
+				'name' => _x( "{$post['plural']}", 'post type general name' ),
 				'singular_name' => _x( "{$post['singular']}", 'post type singular name' ),
 				'all_items' => __( "All {$post['plural']}" ),
 				'add_new' => _x( "Add new {$post['singular']}", WP_LIGHT ),
@@ -41,7 +41,7 @@ if ( current_theme_supports( 'cpt' ) ) {
 				'not_found' => __( "{$post['singular']} not found" ),
 				'not_found_in_trash' => __( "{$post['singular']} not found in trash" ),
 				'parent_item_colon' => '',
-				'menu_name' => $post['singular']
+				'menu_name' => $post['plural']
 			);
 
 			$args = wp_parse_args( $post, $defaults );
