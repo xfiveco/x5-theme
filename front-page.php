@@ -14,15 +14,15 @@ get_header();
 
 <?php if ( have_posts() ) : ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+  <?php while ( have_posts() ) : the_post(); ?>
 
-		<?php get_template_part( 'partials/content' ); ?>
+    <?php get_template_part( 'partials/content' ); ?>
 
-	<?php endwhile; ?>
+  <?php endwhile; ?>
 
 <?php else : ?>
 
-	<?php // print empty info here (no posts found)  ?>
+  <?php // print empty info here (no posts found)  ?>
 
 <?php endif; ?>
 
