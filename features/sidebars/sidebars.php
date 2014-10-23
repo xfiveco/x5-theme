@@ -35,7 +35,7 @@ if ( current_theme_supports( 'sidebars' ) ) {
 
     // default behavior
     $sidebar = array(
-      'name' => __( "Sidebar-1", WP_LIGHT ),
+      'name' => __( 'Sidebar-1', WP_LIGHT ),
       'id' => "sidebar-1",
       'before_widget' => '<section id="%1$s"class="%2$s">',
       'after_widget' => '</section>',

@@ -36,7 +36,7 @@
     wp_head();
     ?>
   </head>
-  <body <?php body_class( "no-js" ); ?>>
+  <body <?php body_class( 'no-js' ); ?>>
 
     <?php do_action( 'wp_light_head' ); ?>
 

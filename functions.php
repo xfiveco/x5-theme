@@ -17,7 +17,7 @@ function wp_light_load_features() {
   foreach ( $features as $feature ) {
 
     if ( current_theme_supports( $feature ) ) {
-      require_once dirname( __FILE__ ) . '/features/' . $feature . '/' . $feature . ".php";
+      require_once dirname( __FILE__ ) . '/features/' . $feature . '/' . $feature . '.php';
     }
   }
 }

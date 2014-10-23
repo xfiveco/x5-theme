@@ -37,7 +37,7 @@ if ( current_theme_supports( 'comments' ) ) {
             $avatar_size = 49;
           ?>
 
-          <div <?php comment_class( "comment" ); ?> id="comment-<?php comment_ID(); ?>" ><?php echo get_avatar( $comment, $avatar_size ); ?>
+          <div <?php comment_class( 'comment' ); ?> id="comment-<?php comment_ID(); ?>" ><?php echo get_avatar( $comment, $avatar_size ); ?>
 
             <div class="user-comment" id="comment-<?php comment_ID(); ?>">
 
