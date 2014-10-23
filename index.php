@@ -1,8 +1,7 @@
 <?php
-
 /**
  * WPized Light: Index
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -27,6 +26,5 @@ get_header();
 
 <?php // add pagination if needed here  ?>
 
-
 <?php get_sidebar(); ?>
-<?php get_footer(); 
+<?php get_footer();

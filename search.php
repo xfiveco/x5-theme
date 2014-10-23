@@ -1,15 +1,14 @@
 <?php
 /**
  * WPized Light: Search
-
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
 get_header();
 ?>
 
-<?php if ( have_posts() ) : ?>  
+<?php if ( have_posts() ) : ?>
 
   <?php get_search_query(); ?>
 
@@ -34,4 +33,4 @@ get_header();
 <?php endif; ?>
 
 <?php get_sidebar(); ?>
-<?php get_footer(); 
+<?php get_footer();

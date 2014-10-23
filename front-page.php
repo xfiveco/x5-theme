@@ -1,11 +1,10 @@
 <?php
-
 /**
  * WPized Light: Front Page
  *
  * Can be used for Front Page display
  * see: http://codex.wordpress.org/Creating_a_Static_Front_Page
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -28,6 +27,5 @@ get_header();
 
 <?php // add pagination if needed here  ?>
 
-
 <?php get_sidebar(); ?>
-<?php get_footer(); 
+<?php get_footer();

@@ -11,15 +11,15 @@ if ( current_theme_supports( 'menus' ) ) {
   else {
     $menus = array( 'navigation-top' => __( 'Top Navigation Menu' ) );
   }
-  
+
   register_nav_menus( $menus );
 
   add_action( 'wp_light_head', 'default_menu' );
 }
 
 /**
- * Print a default menu 
- * 
+ * Print a default menu
+ *
  * @hook wp_light_head
  */
 function default_menu() {

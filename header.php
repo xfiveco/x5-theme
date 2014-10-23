@@ -3,12 +3,12 @@
  * WPized Light: Header
  *
  * Contains dummy HTML to show the default structure of WordPress header file
- * 
+ *
  * Remember to always include the wp_head() call before the ending </head> tag
  *
  * Make sure that you include the <!DOCTYPE html> in the same line as ?> closing tag
  * otherwise ajax might not work properly
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -39,6 +39,5 @@
   <body <?php body_class( "no-js" ); ?>>
 
     <?php do_action( 'wp_light_head' ); ?>
-    
-    <div class="search"><?php get_search_form(); ?></div>
 
+    <div class="search"><?php get_search_form(); ?></div>

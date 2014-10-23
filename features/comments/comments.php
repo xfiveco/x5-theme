@@ -39,7 +39,7 @@ if ( current_theme_supports( 'comments' ) ) {
 
           <div <?php comment_class( "comment" ); ?> id="comment-<?php comment_ID(); ?>" ><?php echo get_avatar( $comment, $avatar_size ); ?>
 
-            <div class="user-comment" id="comment-<?php comment_ID(); ?>"> 
+            <div class="user-comment" id="comment-<?php comment_ID(); ?>">
 
               <ul class="meta">
                 <li class="author"><?php echo get_comment_author_link(); ?> says:</li>
@@ -47,7 +47,7 @@ if ( current_theme_supports( 'comments' ) ) {
               </ul>
               <?php comment_text(); ?> <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', WP_LIGHT ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 
-              <?php edit_comment_link(); ?>   
+              <?php edit_comment_link(); ?>
             </div>
           </div>
           <?php if ( $comment->comment_approved == '0' ) : ?>

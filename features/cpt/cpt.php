@@ -6,9 +6,9 @@ if ( current_theme_supports( 'cpt' ) ) {
 
   // have we defined any posts?
   if ( is_array( $cpt[0] ) ) {
-    
-    $cpt = $cpt[0];  
-    
+
+    $cpt = $cpt[0];
+
     $defaults = array(
       'public' => true,
       'publicly_queryable' => true,
@@ -47,7 +47,7 @@ if ( current_theme_supports( 'cpt' ) ) {
       $args = wp_parse_args( $post, $defaults );
 
       $args['labels'] = $labels;
-    
+
       register_post_type( $key, $args );
     }
   }

@@ -8,7 +8,7 @@ if ( current_theme_supports( 'custom-tax' ) ) {
   if ( is_array( $taxonomies[0] ) ) {
 
     $taxonomies = $taxonomies[0];
-        
+
     $defaults = array(
       'public' => true,
       'hierarchical' => true,
@@ -35,7 +35,7 @@ if ( current_theme_supports( 'custom-tax' ) ) {
         'add_or_remove_items' => 'Add or remove ' . $tax['plural'],
         'choose_from_most_used' => 'Choose from most used ' . $tax['plural'],
       );
-      
+
       // merge the defaults and provided arguments
       $args = wp_parse_args( $tax, $defaults );
 
@@ -48,7 +48,7 @@ if ( current_theme_supports( 'custom-tax' ) ) {
       }
 
       $args['labels'] = $labels;
-      
+
       // register the taxonomy
       register_taxonomy( $key, $tax['posts'], $args );
     }

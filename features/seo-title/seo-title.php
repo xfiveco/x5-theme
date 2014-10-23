@@ -1,7 +1,7 @@
 <?php
 
 if ( current_theme_supports( 'seo-title' ) ) {
-  
+
   /**
    * Creates a nicely formatted and more specific title element text
    * for output in head of document, based on current view.
@@ -14,7 +14,7 @@ if ( current_theme_supports( 'seo-title' ) ) {
    * @return string Filtered title.
    */
   function wp_light_wp_title($title, $sep) {
-  
+
     global $paged, $page;
 
     if ( is_feed() )

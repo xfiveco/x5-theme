@@ -1,11 +1,10 @@
 <?php
-
 /**
  * WPized Light: Archive page
- * 
+ *
  * Archive page lists all posts belonging to monthly / weekly / daily archives
  * it's a good idea to have a drawback method in case no posts were found
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -31,4 +30,4 @@ get_header();
 <?php // add pagination if needed here  ?>
 
 <?php get_sidebar(); ?>
-<?php get_footer(); 
+<?php get_footer();

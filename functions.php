@@ -1,10 +1,9 @@
 <?php
-
 /**
  * WPized Light: Theme specific functionalities
- * 
+ *
  * Do not close any of the php files included with ?> closing tag!
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -49,7 +48,6 @@ add_theme_support( 'images', array(
     'crop' => true,
   ), ) );
 
-
 add_theme_support( 'cpt', array(
   // team post
   'wp-light-team' => array(
@@ -58,7 +56,6 @@ add_theme_support( 'cpt', array(
     'rewrite' => array( 'slug' => 'team', 'with_front' => true, 'publicly_queryable' => true ),
   ),
 ) );
-
 
 add_theme_support( 'custom-tax', array(
   // taxonomy like category
@@ -88,6 +85,3 @@ add_theme_support( 'settings', array(
     'desc' => 'Testing WP Editor',
   ),
 ) );
-
-
-

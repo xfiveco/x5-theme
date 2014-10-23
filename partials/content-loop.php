@@ -18,12 +18,12 @@
   <?php // http://codex.wordpress.org/Formatting_Date_and_Time ?>
 
   <?php if ( has_post_thumbnail() ) the_post_thumbnail(); ?>
-  
+
   <div class="content"> <?php the_content(); ?></div>
 
 </div>
 <!-- / post -->
 
 <div class="pagination">
-  <?php wp_link_pages(); ?> 
+  <?php wp_link_pages(); ?>
 </div>

@@ -1,10 +1,10 @@
 <?php
 /**
  * WPized Light: Comments Handler
- * 
+ *
  * Cover the comments logic here
  * Taken directly from Twenty Eleven
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -29,8 +29,8 @@ endif;
    */
   ?>
   <?php wp_list_comments( array( 'callback' => 'wp_light_comment' ) ); ?>
-  
-  <?php paginate_comments_links(); ?> 
+
+  <?php paginate_comments_links(); ?>
 
   <?php
   /*
@@ -70,4 +70,3 @@ endif;
   comment_form( $defaults );
   ?>
 <?php endif;
-

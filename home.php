@@ -1,11 +1,10 @@
 <?php
-
 /**
  * WPized Light: Home
  *
  * Overwritten by Front Page if specific settings are set.
  * See: http://codex.wordpress.org/Creating_a_Static_Front_Page
- * 
+ *
  * @package WordPress
  * @subpackage WPized_Light
  */
@@ -27,7 +26,6 @@ get_header();
 <?php endif; ?>
 
 <?php // add pagination if needed here  ?>
-
 
 <?php get_sidebar(); ?>
 <?php get_footer();

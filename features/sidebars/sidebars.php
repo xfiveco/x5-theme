@@ -6,12 +6,12 @@ if ( current_theme_supports( 'sidebars' ) ) {
 
   // have we defined any custom sidebars?
   if ( is_array( $sidebars[0] ) ) {
-    
+
     // get them
     $sidebars = $sidebars[0];
 
     $count_sidebars = 0;
-    
+
     // iterate through each sidebar
     foreach ( $sidebars as $key => $sidebar ) {
 
