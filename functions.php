@@ -38,7 +38,7 @@ add_theme_support( 'menus', array(
 add_theme_support( 'sidebars', array(
   array(),
   array(),
-  array()
+  array(),
 ) );
 
 add_theme_support( 'images', array(
@@ -46,7 +46,8 @@ add_theme_support( 'images', array(
     'width' => '400',
     'height' => '500',
     'crop' => true,
-  ), ) );
+  ),
+) );
 
 add_theme_support( 'cpt', array(
   // team post
@@ -65,8 +66,7 @@ add_theme_support( 'custom-tax', array(
     'rewrite' => array( 'slug' => 'category', 'with_front' => false ),
     'posts' => array( 'wp-light-team' ),
   ),
-    )
-);
+) );
 
 add_theme_support( 'settings', array(
   'opt1' => array(
