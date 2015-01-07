@@ -11,7 +11,7 @@
 
 <footer id="footer">
   <p id="copyrights">
-    &copy; <?php echo date( 'Y' ) . ' ' . get_bloginfo( 'name' ); ?>
+    &copy; <?php echo intval( date( 'Y' ) ) . ' ' . esc_html( get_bloginfo( 'name' ) ); ?>
   </p>
 </footer>
 
