@@ -20,7 +20,7 @@
         <title><?php wp_title( '|', true, 'right' ); ?></title>
     <meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 
-    <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/css/main.css" />
+    <?php wp_enqueue_style( 'Template Main', get_template_directory_uri() . '/css/main.css' ); ?>
 
     <!-- optional but recommended -->
     <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -29,12 +29,12 @@
     <!-- /optional -->
 
     <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <?php wp_enqueue_script( 'HTML5', 'http://html5shiv.googlecode.com/svn/trunk/html5.js' ); ?>
     <![endif]-->
     <?php
-    // do not remove
-    wp_head();
-    ?>
+	// do not remove
+	wp_head();
+	?>
   </head>
   <body <?php body_class( 'no-js' ); ?>>
 

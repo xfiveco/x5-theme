@@ -17,9 +17,9 @@ $wp_light_dropdown_pages = isset( $wp_light_options['wp_light_dropdown_pages'] )
 ?>
 <?php echo esc_attr( $wp_light_text ); ?>
 <br />
-<?php echo apply_filters( 'the_content', $wp_light_wp_editor ); ?>
+<?php echo esc_html( apply_filters( 'the_content', $wp_light_wp_editor ) ); ?>
 <br />
-<?php echo $wp_light_dropdown_pages; ?>
+<?php echo esc_html( $wp_light_dropdown_pages ); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer();
