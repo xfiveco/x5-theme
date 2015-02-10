@@ -23,13 +23,13 @@ if ( current_theme_supports( 'comments' ) ) {
 			$GLOBALS['comment'] = $comment;
 			// @codingStandardsIgnoreEnd
 
-			switch ( $comment->comment_type ) { :
+			switch ( $comment->comment_type ) :
 				case 'pingback' :
 				case 'trackback' :
 					?>
 				  Pingback: <?php comment_author_link(); ?><?php edit_comment_link(); ?>
 				<?php
-				break };
+				break;
 			default :
 				?>
 
