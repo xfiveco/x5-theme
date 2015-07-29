@@ -54,7 +54,8 @@ add_theme_support( 'cpt', array(
 	'wp-light-team' => array(
 	'singular' => 'Team Member',
 	'plural' => 'Team Members',
-	'rewrite' => array( 'slug' => 'team', 'with_front' => true, 'publicly_queryable' => true ),
+	'publicly_queryable' => true,
+	'rewrite' => array( 'slug' => 'team', 'with_front' => true ),
 	),
 ) );
 
