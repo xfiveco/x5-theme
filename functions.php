@@ -8,7 +8,6 @@
  * @subpackage WPized_Light
  */
 define( 'WP_LIGHT', 'wp_light' ); // used in translation strings
-define( 'WP_LIGHT_VERSION', 1.5 );
 
 function wp_light_load_features() {
 
