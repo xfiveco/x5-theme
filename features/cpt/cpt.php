@@ -32,7 +32,7 @@ if ( current_theme_supports( 'cpt' ) ) {
 			'name' => _x( esc_attr( "{$post['plural']}" ), 'post type general name' ),
 			'singular_name' => _x( esc_attr( "{$post['singular']}" ), 'post type singular name' ),
 			'all_items' => __( esc_attr( "All {$post['plural']}" ) ),
-			'add_new' => _x( esc_attr( "Add new {$post['singular']}" ), WP_LIGHT ),
+			'add_new' => _x( esc_attr( "Add new" ), WP_LIGHT ),
 			'add_new_item' => __( esc_attr( "Add new {$post['singular']}" ) ),
 			'edit_item' => __( esc_attr( "Edit {$post['singular']}" ) ),
 			'new_item' => __( esc_attr( "New {$post['singular']}" ) ),
