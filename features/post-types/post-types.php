@@ -1,8 +1,8 @@
 <?php
 
-if ( current_theme_supports( 'cpt' ) ) {
+if ( current_theme_supports( 'post-types' ) ) {
 
-	$cpt = get_theme_support( 'cpt' );
+	$cpt = get_theme_support( 'post-types' );
 
 	// have we defined any posts?
 	if ( is_array( $cpt[0] ) ) {

@@ -27,7 +27,7 @@ add_theme_support( 'images', array(
 	),
 ) );
 
-add_theme_support( 'cpt', array(
+add_theme_support( 'post-types', array(
 	// team post
 	'wp-light-team' => array(
 	'singular' => 'Team Member',
@@ -37,7 +37,7 @@ add_theme_support( 'cpt', array(
 	),
 ) );
 
-add_theme_support( 'custom-tax', array(
+add_theme_support( 'taxonomies', array(
 	// taxonomy like category
 	'wp-light-team-tag' => array(
 	'singular' => 'Member Category',

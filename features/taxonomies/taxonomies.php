@@ -1,8 +1,8 @@
 <?php
 
-if ( current_theme_supports( 'custom-tax' ) ) {
+if ( current_theme_supports( 'taxonomies' ) ) {
 
-	$taxonomies = get_theme_support( 'custom-tax' );
+	$taxonomies = get_theme_support( 'taxonomies' );
 
 	// have we defined any custom taxonomies?
 	if ( is_array( $taxonomies[0] ) ) {

@@ -136,7 +136,7 @@ add_theme_support( 'images', array(
 Makes usage of [add_image_size();](http://codex.wordpress.org/Function_Reference/add_image_size) function, automatically adding support for post thumbnails.
 
 ```php
-add_theme_support( 'cpt', array(
+add_theme_support( 'post-types', array(
 	// team post
 	'wp-light-team' => array(
 		'singular' => 'Team Member',
@@ -151,7 +151,7 @@ Makes usage of [register_post_type();](http://codex.wordpress.org/Function_Refer
 Similarly:
 
 ```php
-add_theme_support( 'custom-tax', array(
+add_theme_support( 'taxonomies', array(
 	// taxonomy like category
 	'wp-light-team-tag' => array(
 		'singular' => 'Member Category',
