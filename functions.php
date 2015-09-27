@@ -22,8 +22,8 @@ add_theme_support( 'menus', array(
  * Register custom sidebars.
  *
  * array(
- * 	 'name' => 'Example Sidebar',
- * 	 'id'   => 'example-sidebar',
+ *   'name' => 'Example Sidebar',
+ *   'id'   => 'example-sidebar',
  * ),
  */
 add_theme_support( 'sidebars', array(
