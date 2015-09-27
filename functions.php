@@ -1,27 +1,8 @@
 <?php
 /**
- * WPized Light: Theme specific functionalities
- *
- * Do not close any of the php files included with ?> closing tag!
- *
- * @package WordPress
- * @subpackage WPized_Light
+ * Include features initialization mechanism.
  */
-define( 'WP_LIGHT', 'wp_light' ); // used in translation strings
-
-function wp_light_load_features() {
-
-	$features = scandir( dirname( __FILE__ ) . '/features/' );
-
-	foreach ( $features as $feature ) {
-
-		if ( current_theme_supports( $feature ) ) {
-			require_once dirname( __FILE__ ) . '/features/' . $feature . '/' . $feature . '.php';
-		}
-	}
-}
-
-add_action( 'init', 'wp_light_load_features' );
+require_once dirname( __FILE__ ) . '/features/load.php';
 
 add_theme_support( 'seo-title' );
 add_theme_support( 'threaded-comments' );
