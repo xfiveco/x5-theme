@@ -5,8 +5,6 @@
 require_once dirname( __FILE__ ) . '/features/load.php';
 
 add_theme_support( 'seo-title' );
-add_theme_support( 'threaded-comments' );
-add_theme_support( 'comments' );
 
 // add two navigation menus
 add_theme_support( 'menus', array(
@@ -46,23 +44,5 @@ add_theme_support( 'custom-tax', array(
 	'plural' => 'Member Categories',
 	'rewrite' => array( 'slug' => 'category', 'with_front' => false ),
 	'posts' => array( 'wp-light-team' ),
-	),
-) );
-
-add_theme_support( 'settings', array(
-	'opt1' => array(
-	'type' => 'text',
-	'name' => 'fb',
-	'desc' => 'Facebook link',
-	),
-	'opt2' => array(
-	'type' => 'dropdown_pages',
-	'name' => 'dropdown-pages',
-	'desc' => 'Testing dropdown pages',
-	),
-	'opt3' => array(
-	'type' => 'wp_editor',
-	'name' => 'wp-editor',
-	'desc' => 'Testing WP Editor',
 	),
 ) );
