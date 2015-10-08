@@ -1,87 +1,73 @@
 <?php
 /**
- * WPized Light: Theme specific functionalities
- *
- * Do not close any of the php files included with ?> closing tag!
- *
- * @package WordPress
- * @subpackage WPized_Light
+ * Include features initialization mechanism.
  */
-define( 'WP_LIGHT', 'wp_light' ); // used in translation strings
+require_once dirname( __FILE__ ) . '/features/load.php';
 
-function wp_light_load_features() {
-
-	$features = scandir( dirname( __FILE__ ) . '/features/' );
-
-	foreach ( $features as $feature ) {
-
-		if ( current_theme_supports( $feature ) ) {
-			require_once dirname( __FILE__ ) . '/features/' . $feature . '/' . $feature . '.php';
-		}
-	}
-}
-
-add_action( 'init', 'wp_light_load_features' );
-
+/**
+ * Creates a nicely formatted and more specific title based on current view.
+ */
 add_theme_support( 'seo-title' );
-add_theme_support( 'threaded-comments' );
-add_theme_support( 'comments' );
 
-// add two navigation menus
+/**
+ * Register custom menu locations.
+ *
+ * 'example-menu' => 'Example Menu',
+ */
 add_theme_support( 'menus', array(
-	'navigation-top' => __( 'Top Navigation Menu' ),
-	'navigation-foot' => __( 'Footer Navigation Menu' ),
+
 ) );
 
-// add 3 default sidebars
+/**
+ * Register custom sidebars.
+ *
+ * array(
+ *   'name' => 'Example Sidebar',
+ *   'id'   => 'example-sidebar',
+ * ),
+ */
 add_theme_support( 'sidebars', array(
-	array(),
-	array(),
-	array(),
+
 ) );
 
+/**
+ * Register custom thumbnail sizes.
+ *
+ * 'example-thumbnail' => array(
+ *   'width'  => 400,
+ *   'height' => 500,
+ *   'crop'   => true,
+ * ),
+ */
 add_theme_support( 'images', array(
-	'400x500' => array(
-	'width' => '400',
-	'height' => '500',
-	'crop' => true,
-	),
+
 ) );
 
-add_theme_support( 'cpt', array(
-	// team post
-	'wp-light-team' => array(
-	'singular' => 'Team Member',
-	'plural' => 'Team Members',
-	'publicly_queryable' => true,
-	'rewrite' => array( 'slug' => 'team', 'with_front' => true ),
-	),
+/**
+ * Add custom post types to the theme.
+ *
+ * 'example-post' => array(
+ *   'singular' => 'Example Post',
+ *   'plural'   => 'Example Posts',
+ *   'public'   => true,
+ *   'rewrite'  => array( 'slug' => 'example-post, 'with_front' => true ),
+ *   'supports' => array( 'title', 'editor' ),
+ * ),
+ */
+add_theme_support( 'post-types', array(
+
 ) );
 
-add_theme_support( 'custom-tax', array(
-	// taxonomy like category
-	'wp-light-team-tag' => array(
-	'singular' => 'Member Category',
-	'plural' => 'Member Categories',
-	'rewrite' => array( 'slug' => 'category', 'with_front' => false ),
-	'posts' => array( 'wp-light-team' ),
-	),
-) );
+/**
+ * Register custom taxonomies (categories) to posts.
+ *
+ * 'example-category' => array(
+ *   'singular' => 'Example Category',
+ *   'plural'   => 'Example Categories',
+ *   'rewrite'  => array( 'slug' => 'example-category', 'with_front' => false ),
+ *   'posts'    => array( 'example-post' ),
+ * ),
+ */
+add_theme_support( 'taxonomies', array(
 
-add_theme_support( 'settings', array(
-	'opt1' => array(
-	'type' => 'text',
-	'name' => 'fb',
-	'desc' => 'Facebook link',
-	),
-	'opt2' => array(
-	'type' => 'dropdown_pages',
-	'name' => 'dropdown-pages',
-	'desc' => 'Testing dropdown pages',
-	),
-	'opt3' => array(
-	'type' => 'wp_editor',
-	'name' => 'wp-editor',
-	'desc' => 'Testing WP Editor',
-	),
 ) );
