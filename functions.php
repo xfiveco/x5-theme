@@ -50,7 +50,7 @@ add_theme_support( 'images', array(
  *   'singular' => 'Example Post',
  *   'plural'   => 'Example Posts',
  *   'public'   => true,
- *   'rewrite'  => array( 'slug' => 'example-post, 'with_front' => true ),
+ *   'rewrite'  => array( 'slug' => 'example-post', 'with_front' => true ),
  *   'supports' => array( 'title', 'editor' ),
  * ),
  */
