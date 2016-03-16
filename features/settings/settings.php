@@ -9,8 +9,8 @@ if ( current_theme_supports( 'settings' ) ) {
 
 		require_once('settings.class.php');
 
-		if ( class_exists( 'WP_Light_Settings' ) ) {
-			$settings = new WP_Light_Settings( $settings[0] );
+		if ( class_exists( 'X5_Settings' ) ) {
+			$settings = new X5_Settings( $settings[0] );
 		}
 	}
 }

@@ -3,10 +3,10 @@
 /**
  *
  * @package WordPress
- * @subpackage wp_light Theme
- * @author Rafal Gicgier rafal@x-team.com
+ * @subpackage X5 Theme
+ * @author Rafal Gicgier rafal@xfive.co
  */
-class WP_Light_Settings {
+class X5_Settings {
 
 	private $settings = array();
 
@@ -48,11 +48,11 @@ class WP_Light_Settings {
 
       <form action="options.php" method="post">
         <?php
-		settings_fields( 'wp_light_options' );
-		do_settings_sections( 'wp_light_settings' );
+		settings_fields( 'x5_options' );
+		do_settings_sections( 'x5_settings' );
 		?>
         <br />
-        <input name="wp_light_options[submit]" type="submit" class="button-primary" value="<?php esc_attr_e( 'Save Settings', WP_LIGHT ); ?>" />
+        <input name="x5_options[submit]" type="submit" class="button-primary" value="<?php esc_attr_e( 'Save Settings', X5 ); ?>" />
       </form>
     </div>
 
@@ -67,16 +67,16 @@ class WP_Light_Settings {
 	*/
 	function admin_init() {
 
-		register_setting( 'wp_light_options', 'wp_light_options', array( $this, 'options_validate' ) );
+		register_setting( 'x5_options', 'x5_options', array( $this, 'options_validate' ) );
 
-		add_settings_section( 'wp_light_main', 'Main Settings', array( $this, 'options_text' ), 'wp_light_settings' );
+		add_settings_section( 'x5_main', 'Main Settings', array( $this, 'options_text' ), 'x5_settings' );
 
 		foreach ( $this->settings as $option ) {
 			if ( isset( $option['generate_field_callback'] ) && isset( $option['validate_field_callback'] ) ) {
-				add_settings_field( $option['name'], $option['desc'], $option['generate_field_callback'], 'wp_light_settings', 'wp_light_main', $option );
+				add_settings_field( $option['name'], $option['desc'], $option['generate_field_callback'], 'x5_settings', 'x5_main', $option );
 				continue;
 			}
-			add_settings_field( $option['name'], $option['desc'], array( $this, 'options_generate_fields' ), 'wp_light_settings', 'wp_light_main', $option );
+			add_settings_field( $option['name'], $option['desc'], array( $this, 'options_generate_fields' ), 'x5_settings', 'x5_main', $option );
 		}
 	}
 
@@ -111,11 +111,11 @@ class WP_Light_Settings {
 	* @param {array of strings} $option
 	*/
 	function generate_text_field($option) {
-		$options = get_option( 'wp_light_options' );
+		$options = get_option( 'x5_options' );
 		if ( ! empty( $options[ $option['name'] ] ) ) {
-			echo esc_attr( "<input id='{$option['name']}' name='wp_light_options[{$option['name']}]' size='80' type='text' value='{$options[ $option['name'] ]}' />" );
+			echo esc_attr( "<input id='{$option['name']}' name='x5_options[{$option['name']}]' size='80' type='text' value='{$options[ $option['name'] ]}' />" );
 		} else {
-			echo esc_attr( "<input id='{$option['name']}' name='wp_light_options[{$option['name']}]' size='80' type='text' value='' />" ); }
+			echo esc_attr( "<input id='{$option['name']}' name='x5_options[{$option['name']}]' size='80' type='text' value='' />" ); }
 	}
 
 	/**
@@ -124,17 +124,17 @@ class WP_Light_Settings {
 	* @param {array of strings} $option
 	*/
 	function generate_dropdown_pages_field($option) {
-		$options = get_option( 'wp_light_options' );
+		$options = get_option( 'x5_options' );
 
 		if ( ! empty( $options[ $option['name'] ] ) ) {
 			$args = array(
 			'selected' => $options[ $option['name'] ],
-			'name' => "wp_light_options[{$option['name']}]",
+			'name' => "x5_options[{$option['name']}]",
 			);
 			wp_dropdown_pages( $args );
 		} else {
 			$args = array(
-			'name' => "wp_light_options[{$option['name']}]",
+			'name' => "x5_options[{$option['name']}]",
 			);
 			wp_dropdown_pages( $args );
 		}
@@ -146,9 +146,9 @@ class WP_Light_Settings {
 	* @param {array of strings} $option
 	*/
 	function generate_wp_editor($option) {
-		$options = get_option( 'wp_light_options' );
+		$options = get_option( 'x5_options' );
 
-		$settings = array( 'textarea_name' => "wp_light_options[{$option['name']}]", 'media_buttons' => false, 'wpautop' => true );
+		$settings = array( 'textarea_name' => "x5_options[{$option['name']}]", 'media_buttons' => false, 'wpautop' => true );
 
 		if ( ! empty( $options[ $option['name'] ] ) ) {
 			wp_editor( $options[ $option['name'] ], $option['name'], $settings );
@@ -189,7 +189,7 @@ class WP_Light_Settings {
 	* @hook admin_menu
 	*/
 	function options_page() {
-		add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'wp_light_settings', array( $this, 'do_options_page' ) );
+		add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'x5_settings', array( $this, 'do_options_page' ) );
 	}
 
 }

@@ -1,10 +1,10 @@
 <?php
 
 /*
- * WPIzed Light: Page
+ * X5: Page
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 get_header();
 the_post();

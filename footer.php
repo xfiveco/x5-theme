@@ -1,11 +1,11 @@
 <?php
 /**
- * WPized Light: Footer
+ * X5: Footer
  *
  * Remember to always include the wp_footer() call before the </body> tag
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 ?>
 

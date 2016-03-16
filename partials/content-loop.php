@@ -1,6 +1,6 @@
 <?php
 /**
- * WPized Light: content-single
+ * X5: content-single
  *
  * The template for displaying content after all other content-{template}
  * Contains some basic HTML and WordPress functions that are quite common across

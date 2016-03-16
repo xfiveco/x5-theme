@@ -1,12 +1,12 @@
 <?php
 /**
- * WPized Light: Home
+ * X5: Home
  *
  * Overwritten by Front Page if specific settings are set.
  * See: http://codex.wordpress.org/Creating_a_Static_Front_Page
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 get_header();
 ?>

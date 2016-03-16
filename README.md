@@ -1,9 +1,9 @@
-WPized Light
+X5 Theme
 ============
 
-WPized Light is supposed to facilitate the creation of simple WordPress based themes and organize the project in logical and consistent inclusions to simplify the development and debugging process among different collaborators.
+X5 Theme is supposed to facilitate the creation of simple WordPress based themes and organize the project in logical and consistent inclusions to simplify the development and debugging process among different collaborators.
     
-WPized Light contains most common files, used among every projects, ie.
+X5 Theme contains most common files, used among every projects, ie.
 
 ### Most common theme files
 - index.php
@@ -55,49 +55,49 @@ http://codex.wordpress.org/Function_Reference/get_post_format
 
 ### functions.php file
 
-functions.php is the file where most of the Theme based functions should be placed, by default there’s nothing enabled with WPized Light.
+functions.php is the file where most of the Theme based functions should be placed, by default there’s nothing enabled with X5.
 
-## WPized Light Theme Specific Functionality
-WPized Light comes with some default functions that can be enabled with simple function call, placed within the functions.php of the theme.
+## X5 Theme Specific Functionality
+X5 comes with some default functions that can be enabled with simple function call, placed within the functions.php of the theme.
 
-### wp_light_seo_title
+### x5_seo_title
 
 Will print a SEO friendly and optimized title between the `<title> </title>` tags instead of the default WordPress title.
 
 ```php
-add_theme_support( 'wp_light_seo_title' ); 
+add_theme_support( 'x5_seo_title' ); 
 ```
 
-### wp_light_threaded_comments
+### x5_threaded_comments
 
 Will enable threaded comments (reply link and dynamic .js)
 
 ```php
-add_theme_support( 'wp_light_threaded_comments' );
+add_theme_support( 'x5_threaded_comments' );
 ```
 
-### wp_light_comment_form_defaults
+### x5_comment_form_defaults
 
 Will enable default styling of the comment form and will also add default form fields
 
 ```php
-add_theme_support( 'wp_light_comment_form_defaults' );
+add_theme_support( 'x5_comment_form_defaults' );
 ```
 
-### wp_light_default_sidebar
+### x5_default_sidebar
 
 Will make the theme sidebar ready by adding the Widgets section to the Appearance -> Widgets, file which displays the sidebar is sidebar.php 
 
 ```php
-add_theme_support( 'wp_light_default_sidebar' ); 
+add_theme_support( 'x5_default_sidebar' ); 
 ```
 
-### wp_light_default_menu
+### x5_default_menu
 
 Will add Appearance -> Menus entry, giving you the ability to add menu entries. The menu, if filled with content will be automatically printed in header.php line 42.
 
 ```php
-add_theme_support( 'wp_light_default_menu' );
+add_theme_support( 'x5_default_menu' );
 ```
 
 Each of these functions (exculding seo-title, threaded-comments, comments) has an optional second parameter in the form of an array that lets one overwrite the defaults. 
@@ -119,7 +119,7 @@ add_theme_support( 'sidebars', array(
     array(),
     array(),
     array(
-        'name' => __( "Sidebar-Rafal", WP_LIGHT ),
+        'name' => __( "Sidebar-Rafal", X5 ),
         'id' => "sidebar-rafal",
     )
 ));
@@ -155,7 +155,7 @@ Makes usage of [add_image_size();](http://codex.wordpress.org/Function_Reference
 ```php
 add_theme_support( 'cpt', array(
 	// team post
-	'wp-light-team' => array(
+	'x5-team' => array(
 		'singular' => 'Team Member',
 		'plural' => 'Team Members',
 		'rewrite' => array( 'slug' => 'team', 'with_front' => true, 'publicly_queryable' => true ),
@@ -163,18 +163,18 @@ add_theme_support( 'cpt', array(
 ) );
 ```  
 
-Makes usage of [register_post_type();](http://codex.wordpress.org/Function_Reference/register_post_type) function. The posts are named after each array key passed (hence wp-light-team will be this Post Type's prefix).
+Makes usage of [register_post_type();](http://codex.wordpress.org/Function_Reference/register_post_type) function. The posts are named after each array key passed (hence x5-team will be this Post Type's prefix).
 
 Similarly: 
 
 ```php
 add_theme_support( 'custom-tax', array(
 	// taxonomy like category
-	'wp-light-team-tag' => array(
+	'x5-team-tag' => array(
 		'singular' => 'Member Category',
 		'plural' => 'Member Categories',
 		'rewrite' => array( 'slug' => 'category', 'with_front' => false ),
-		'posts' => array( 'wp-light-team' ),
+		'posts' => array( 'x5-team' ),
 	),
 		)
 );
@@ -182,7 +182,7 @@ add_theme_support( 'custom-tax', array(
 
 Makes usage of [register_taxonomy();](http://codex.wordpress.org/Function_Reference/register_taxonomy) function.
 
-WPized Light also supports semi-automatic creation of Appearance -> Theme Options page, for example:
+X5 also supports semi-automatic creation of Appearance -> Theme Options page, for example:
 
 ```php
 'settings' => array(
@@ -214,7 +214,7 @@ Would create 4 options:
 * 1 dropdown pages field
 * 1 wp editor field
 
-In case custom Theme Options were to be added WPized Light supports custom callback functionality, for example:
+In case custom Theme Options were to be added X5 supports custom callback functionality, for example:
 
 ```php
 'settings' => array(
@@ -246,7 +246,7 @@ function custom_validate_field($input) {
 They could be placed in an included file or at the bottom of functions.php. 
 
 - The Settings are created as an overlay to the [Settings API](https://codex.wordpress.org/Settings_API).
-- The Settings are the example of a complex WPized Light plugin, which loads additionals files, stored within the plugin directory, along the auto-included file.
+- The Settings are the example of a complex X5 plugin, which loads additionals files, stored within the plugin directory, along the auto-included file.
 
 Please avoid adding any config directly to the functions.php file. Every extra, theme specific functions should be stored within includes directory, given a descriptive name.
 For example sidebars.php would only contain logic related to sidebars (as register_sidebar), nav-menus would solely contain logic related to navigation menus etc.

@@ -1,13 +1,13 @@
 <?php
 /**
- * WPized Light: content-single
+ * X5: content-single
  *
  * The template for displaying content after all other content-{template} files
  * were either not used or not found, see:
  * http://codex.wordpress.org/Function_Reference/get_template_part
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 ?>
 

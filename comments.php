@@ -1,12 +1,12 @@
 <?php
 /**
- * WPized Light: Comments Handler
+ * X5: Comments Handler
  *
  * Cover the comments logic here
  * Taken directly from Twenty Eleven
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 ?>
 
@@ -28,7 +28,7 @@ endif;
 	* in commentstemplate.php file
 	*/
 	?>
-	<?php wp_list_comments( array( 'callback' => 'wp_light_comment' ) ); ?>
+	<?php wp_list_comments( array( 'callback' => 'x5_comment' ) ); ?>
 
 	<?php paginate_comments_links(); ?>
 
@@ -62,10 +62,10 @@ endif;
 	'comment_notes_after' => '',
 	'id_form' => 'commentform',
 	'id_submit' => 'button-add-comment',
-	'title_reply' => __( 'Leave a reply', WP_LIGHT ),
-	'title_reply_to' => __( 'Leave a Reply to %s', WP_LIGHT ),
-	'cancel_reply_link' => __( 'Cancel comment', WP_LIGHT ),
-	'label_submit' => __( 'Comment', WP_LIGHT ),
+	'title_reply' => __( 'Leave a reply', X5 ),
+	'title_reply_to' => __( 'Leave a Reply to %s', X5 ),
+	'cancel_reply_link' => __( 'Cancel comment', X5 ),
+	'label_submit' => __( 'Comment', X5 ),
 	);
 	comment_form( $defaults );
 	?>
