@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage X5 Theme
- * @author Rafal Gicgier rafal@x-team.com
+ * @author Rafal Gicgier rafal@xfive.co
  */
 class X5_Settings {
 
