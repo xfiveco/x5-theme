@@ -18,7 +18,7 @@ if ( current_theme_supports( 'sidebars' ) ) {
 			++$count_sidebars;
 
 			$defaults = array(
-			'name' => __( esc_attr( "Sidebar-{$count_sidebars}" ), WP_LIGHT ),
+			'name' => __( esc_attr( "Sidebar-{$count_sidebars}" ), X5 ),
 			'id' => "sidebar-{$count_sidebars}",
 			'before_widget' => '<section id="%1$s"class="%2$s">',
 			'after_widget' => '</section>',
@@ -35,7 +35,7 @@ if ( current_theme_supports( 'sidebars' ) ) {
 
 		// default behavior
 		$sidebar = array(
-		'name' => __( 'Sidebar-1', WP_LIGHT ),
+		'name' => __( 'Sidebar-1', X5 ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<section id="%1$s"class="%2$s">',
 		'after_widget' => '</section>',

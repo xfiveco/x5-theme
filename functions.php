@@ -1,15 +1,15 @@
 <?php
 /**
- * WPized Light: Theme specific functionalities
+ * X5: Theme specific functionalities
  *
  * Do not close any of the php files included with ?> closing tag!
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
-define( 'WP_LIGHT', 'wp_light' ); // used in translation strings
+define( 'X5', 'x5' ); // used in translation strings
 
-function wp_light_load_features() {
+function x5_load_features() {
 
 	$features = scandir( dirname( __FILE__ ) . '/features/' );
 
@@ -21,7 +21,7 @@ function wp_light_load_features() {
 	}
 }
 
-add_action( 'init', 'wp_light_load_features' );
+add_action( 'init', 'x5_load_features' );
 
 add_theme_support( 'seo-title' );
 add_theme_support( 'threaded-comments' );
@@ -50,7 +50,7 @@ add_theme_support( 'images', array(
 
 add_theme_support( 'cpt', array(
 	// team post
-	'wp-light-team' => array(
+	'x5-team' => array(
 	'singular' => 'Team Member',
 	'plural' => 'Team Members',
 	'publicly_queryable' => true,
@@ -60,11 +60,11 @@ add_theme_support( 'cpt', array(
 
 add_theme_support( 'custom-tax', array(
 	// taxonomy like category
-	'wp-light-team-tag' => array(
+	'x5-team-tag' => array(
 	'singular' => 'Member Category',
 	'plural' => 'Member Categories',
 	'rewrite' => array( 'slug' => 'category', 'with_front' => false ),
-	'posts' => array( 'wp-light-team' ),
+	'posts' => array( 'x5-team' ),
 	),
 ) );
 

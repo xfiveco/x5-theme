@@ -1,12 +1,12 @@
 <?php
 /**
- * WPized Light: Archive page
+ * X5: Archive page
  *
  * Archive page lists all posts belonging to monthly / weekly / daily archives
  * it's a good idea to have a drawback method in case no posts were found
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 get_header();
 ?>

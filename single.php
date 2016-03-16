@@ -1,9 +1,9 @@
 <?php
 /*
- * WPIzed Light: Post
+ * X5: Post
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 get_header();
 the_post();

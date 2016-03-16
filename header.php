@@ -1,6 +1,6 @@
 <?php
 /**
- * WPized Light: Header
+ * X5: Header
  *
  * Contains dummy HTML to show the default structure of WordPress header file
  *
@@ -10,7 +10,7 @@
  * otherwise ajax might not work properly
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 ?><!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
@@ -38,6 +38,6 @@
   </head>
   <body <?php body_class( 'no-js' ); ?>>
 
-    <?php do_action( 'wp_light_head' ); ?>
+    <?php do_action( 'x5_head' ); ?>
 
     <div class="search"><?php get_search_form(); ?></div>

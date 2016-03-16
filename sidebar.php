@@ -1,9 +1,9 @@
 <?php
 /*
- * WPized Light: Sidebar
+ * X5: Sidebar
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 ?>
 

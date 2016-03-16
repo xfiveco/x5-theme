@@ -1,9 +1,9 @@
 <?php
 /**
- * WPized Light: Index
+ * X5: Index
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 get_header();
 ?>

@@ -1,9 +1,9 @@
 <?php
 /**
- * WPized Light: Search
+ * X5: Search
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 get_header();
 ?>
@@ -23,8 +23,8 @@ get_header();
 	<?php get_search_form(); ?>
 
   <div class="not-found">
-    <h2> <?php _e( 'Nothing Found', WP_LIGHT ); ?> </h2>
-    <p> <?php _e( 'Perhaps checking one of these categories could help you? ', WP_LIGHT ); ?></p>
+    <h2> <?php _e( 'Nothing Found', X5 ); ?> </h2>
+    <p> <?php _e( 'Perhaps checking one of these categories could help you? ', X5 ); ?></p>
     <ul>
 		<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 10 ) ); ?>
     </ul>

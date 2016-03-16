@@ -14,13 +14,13 @@ if ( current_theme_supports( 'menus' ) ) {
 
 	register_nav_menus( $menus );
 
-	add_action( 'wp_light_head', 'default_menu' );
+	add_action( 'x5_head', 'default_menu' );
 }
 
 /**
  * Print a default menu
  *
- * @hook wp_light_head
+ * @hook x5_head
  */
 function default_menu() {
 	if ( has_nav_menu( 'navigation-top' ) ) {

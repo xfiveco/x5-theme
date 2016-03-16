@@ -1,12 +1,12 @@
 <?php
 /**
- * WPized Light: 404 page
+ * X5: 404 page
  *
  * Contains some dummy HTML with sample content
  * http://codex.wordpress.org/Creating_an_Error_404_Page
  *
  * @package WordPress
- * @subpackage WPized_Light
+ * @subpackage X5
  */
 get_header();
 ?>
