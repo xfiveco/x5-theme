@@ -13,8 +13,7 @@
  * @subpackage X5
  */
 ?><!DOCTYPE html>
-<!--[if IE 8]> <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+  <html class="no-js" <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
         <title><?php wp_title( '|', true, 'right' ); ?></title>
@@ -27,10 +26,6 @@
     <link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/images/theme/favicon.ico" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <!-- /optional -->
-
-    <!--[if lt IE 9]>
-        <?php wp_enqueue_script( 'html5', 'http://html5shiv.googlecode.com/svn/trunk/html5.js' ); ?>
-    <![endif]-->
     <?php
 	// do not remove
 	wp_head();
